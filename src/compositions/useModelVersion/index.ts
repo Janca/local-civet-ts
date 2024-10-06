@@ -1,7 +1,7 @@
-import {DownloadMeta, ModelVersionMeta, RefLike} from '@/types'
-import {ref, toValue, watch} from 'vue'
 import toComputedRef from '@/compositions/toComputedRef'
+import {DownloadMeta, ModelVersionMeta, RefLike} from '@/types'
 import dateformat from 'dateformat'
+import {computed, ref, toValue, watch} from 'vue'
 
 function sortDownloads(downloads: DownloadMeta[]) {
     if (downloads == null) {
@@ -67,7 +67,13 @@ function useModelVersion(_modelVersion: RefLike<ModelVersionMeta | undefined>) {
     const published = toComputedRef(version, 'published', d => dateformat(d, 'mmm dS, yyyy'))
     const updated = toComputedRef(version, 'updated', d => dateformat(d, 'mmm dS, yyyy'))
 
-    const images = toComputedRef(version, 'images')
+    const images = computed(() => {
+        const _version = version.value
+        if (_version == null) return []
+        const _images = _version.images
+        if (_images == null) return []
+        return _images.map(image => ({...image, 'url': process.env.BASE_URL + image.url}))
+    })//toComputedRef(version, 'images')
     const downloads = toComputedRef(version, 'downloads', sortDownloads)
 
     return {

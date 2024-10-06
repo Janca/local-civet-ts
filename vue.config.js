@@ -11,6 +11,7 @@ module.exports = defineConfig({
             } : undefined
         }
     },
+
     outputDir: 'docs',
     publicPath:"/local-civet-ts"
 })

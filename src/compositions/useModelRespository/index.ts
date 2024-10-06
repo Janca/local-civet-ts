@@ -42,7 +42,7 @@ function useModelRepository(options?: UseModelsOptions) {
         try {
             loading.value = true
 
-            const result = await fetch('/repository/metadata.json');
+            const result = await fetch(`${process.env.BASE_URL}repository/metadata.json`);
             if (!result.ok) throw 'Invalid response.'
 
             models.value = []
