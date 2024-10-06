@@ -8,7 +8,7 @@
         "name": "fking",
         "avatarImageUrl": "/repository/images/00706-4282187234.png"
       },
-      "description": "## fking-fable\n\n***a fking stable diffusion model***\n\nThis is the model description text where the maintainer can use **all sorts** of *markdown*.\n\nLike lists:\n - Item1\n - *Item2*\n - **Item 3**\n\n### And images\n\n![alt_text](/repository/images/00807-168635851.png){width: 768px;}",
+      "description": "## fking-fable\n\n***a fking stable diffusion model***\n\nThis is the model description text where the maintainer can use **all sorts** of *markdown*.\n\nLike lists:\n - Item1\n - *Item2*\n - **Item 3**\n\n### And images\n\n![alt_text](https://i.imgur.com/7xNdWhf.jpeg)",
       "versions": [
         {
           "name": "v001",

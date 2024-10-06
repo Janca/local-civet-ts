@@ -1,10 +1,8 @@
-import {ModelMeta, ModelVersionMeta, RefLike} from '@/types'
-import {computed, ref, toValue, watch} from 'vue'
-import dateformat from 'dateformat'
 import toComputedRef from '@/compositions/toComputedRef'
 import useModelVersion from '@/compositions/useModelVersion'
-import toComputedFn from '@/compositions/toComputedFn'
-import {useToNumber} from "@vueuse/core";
+import {ModelMeta, ModelVersionMeta, RefLike} from '@/types'
+import dateformat from 'dateformat'
+import {computed, ref, toValue, watch} from 'vue'
 
 function useModel(_model: RefLike<ModelMeta | undefined>) {
     const initialValue = toValue(_model)
@@ -17,7 +15,13 @@ function useModel(_model: RefLike<ModelMeta | undefined>) {
 
     const author = toComputedRef(model, 'author')
     const authorName = toComputedRef(author, 'name')
-    const authorAvatarImageUrl = toComputedRef(author, 'avatarImageUrl')
+    const authorAvatarImageUrl = computed(() => {
+        const _author = author.value
+        if (_author == null) return undefined
+        const url = _author.avatarImageUrl
+        if (url == null) return undefined
+        return process.env.BASE_URL + url
+    })//toComputedRef(author, 'avatarImageUrl')
 
     const base = toComputedRef(model, 'base')
     const description = toComputedRef(model, 'description')
