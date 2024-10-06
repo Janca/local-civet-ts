@@ -1,0 +1,32 @@
+@use "@/styles/variables" as v;
+
+@mixin default-scrollbars($size:8px) {
+  &::-webkit-scrollbar {
+    height: $size;
+    width: $size;
+
+    border-radius: $size;
+    background-color: v.$body-color-v-depth-1;
+
+    &:hover {
+      background-color: v.$body-color-v-depth-3;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $size;
+    background-color: v.$body-color-v-depth-2;
+
+    &:hover {
+      background-color: v.$body-color-v-depth-4;
+    }
+
+    &:active {
+      background-color: v.$body-color-v-depth-5;
+    }
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

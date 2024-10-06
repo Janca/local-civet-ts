@@ -1,0 +1,1 @@
+type Fn<T, R> = (value: NonNullable<T>) => R

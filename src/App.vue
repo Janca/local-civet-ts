@@ -1,30 +1,20 @@
+<script lang="ts" setup>
+import {TransitionedRouterView} from '@/components/TransitionedRouterView'
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div :class="[$style.AppView]">
+    <TransitionedRouterView/>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style module lang="scss">
+@use "@/styles/variables";
 
-nav {
-  padding: 30px;
+.AppView {
+  display: flex;
+  flex-flow: column nowrap;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  justify-content: center;
 }
 </style>

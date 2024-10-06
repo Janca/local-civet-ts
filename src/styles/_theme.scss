@@ -1,0 +1,84 @@
+@use "sass:color";
+
+$transition-duration: 0.12s;
+$transition-timing-fn: ease;
+
+$system-font-stack: 'Roboto', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, noto, arial, sans-serif;
+$mono-font-stack: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
+$primary-hue: 251deg;
+$primary-saturation: 90%;
+$primary-lightness: 62%;
+
+$primary-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+
+$primary-color-v-depth-1: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) * (1 + 0.0725)));
+$primary-color-v-depth-2: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) * (1 + 0.1025)));
+$primary-color-v-depth-3: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) * (1 + 0.15)));
+$primary-color-v-depth-4: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) * (1 + 0.1775)));
+$primary-color-v-depth-5: hsl(var(--primary-hue), var(--primary-saturation), calc(var(--primary-lightness) * (1 + 0.25)));
+
+$primary-color-alt-1: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.85), calc(var(--primary-lightness) * 1.35));
+$primary-color-alt-2: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.8), calc(var(--primary-lightness) * 1.425));
+$primary-color-alt-3: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.75), calc(var(--primary-lightness) * 1.475));
+
+$interactive-text-color: white;
+$title-text-color: $interactive-text-color;
+$primary-text-color: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.15), calc(var(--primary-lightness) * 1.375));
+$secondary-text-color: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.3), calc(var(--primary-lightness) * 1.2575));
+
+$body-color: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.1), calc(var(--primary-lightness) * 0.1225));
+
+$body-color-v-depth-1: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.1), calc(var(--primary-lightness) * 0.1835));
+$body-color-v-depth-2: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.1), calc(var(--primary-lightness) * 0.2335));
+$body-color-v-depth-3: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.1), calc(var(--primary-lightness) * 0.2835));
+$body-color-v-depth-4: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.1), calc(var(--primary-lightness) * 0.3335));
+$body-color-v-depth-5: hsl(var(--primary-hue), calc(var(--primary-saturation) * 0.1), calc(var(--primary-lightness) * 0.3835));
+
+//$primary-color: #3c2fef;
+////$primary-color: #8d67ff;
+////$primary-color: #6640e1;
+//
+//$primary-color-v-depth-1: color.scale($primary-color, $lightness: 7.25%);
+//$primary-color-v-depth-2: color.scale($primary-color, $lightness: 10.25%);
+//$primary-color-v-depth-3: color.scale($primary-color, $lightness: 15%);
+//$primary-color-v-depth-4: color.scale($primary-color, $lightness: 17.75%);
+//$primary-color-v-depth-5: color.scale($primary-color, $lightness: 25%);
+//
+//$primary-color-alt-1: color.scale($primary-color, $saturation: -25%, $lightness: 50%);
+//$primary-color-alt-2: color.scale($primary-color-alt-1, $lightness: 25%);
+//$primary-color-alt-3: color.scale($primary-color-alt-2, $lightness: 25%);
+//
+//$primary-text-color: color.scale($primary-color, $saturation: -60%, $lightness: 75.5%);
+//$interactive-text-color: white;
+//$title-text-color: $interactive-text-color;
+//$secondary-text-color: color.scale($primary-text-color, $lightness: -15%);
+//
+//$body-color: color.scale($primary-color, $saturation: -90%, $lightness: -85%);
+//$body-color-v-depth-1: color.scale($body-color, $lightness: 3.35%);
+//$body-color-v-depth-2: color.scale($body-color-v-depth-1, $lightness: 5%);
+//$body-color-v-depth-3: color.scale($body-color-v-depth-2, $lightness: 5%);
+//$body-color-v-depth-4: color.scale($body-color-v-depth-3, $lightness: 5%);
+//$body-color-v-depth-5: color.scale($body-color-v-depth-4, $lightness: 5%);
+
+$unit-0: 0.1rem;
+$unit-1: $unit-0 * 2;
+$unit-2: $unit-0 * 2.5;
+$unit-3: $unit-0 * 3.25;
+$unit-4: $unit-0 * 4;
+$unit-5: $unit-0 * 5;
+$unit-6: $unit-0 * 5.75;
+$unit-7: $unit-0 * 6.25;
+$unit-8: $unit-0 * 7.5;
+$unit-9: $unit-0 * 9.25;
+$unit-10: $unit-0 * 10;
+$unit-11: $unit-0 * 11;
+$unit-12: $unit-0 * 12;
+$unit-13: $unit-0 * 13;
+$unit-14: $unit-0 * 14;
+$unit-15: $unit-0 * 15;
+
+$unit-base-rem: min(max(4.15vw, 16px), 20px);
+
+$border-radius: $unit-0 * 3;
+$border-color: $body-color-v-depth-5;

@@ -1,25 +1,39 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import {createRouter, createWebHashHistory, RouteLocationNormalized, RouteRecordRaw} from 'vue-router'
+import {ModelGallerySearch, ModelGalleryView} from '@/views/ModelGalleryView'
+import {ModelView} from '@/views/ModelView'
+import {ApplicationRouterView} from '@/components/Application'
+import useTheme from '@/compositions/useTheme'
+
+const {
+    primary
+} = useTheme()
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    {
+        path: '/',
+        component: ApplicationRouterView,
+        children: [
+            {
+                path: '',
+                name: 'home',
+                components: {
+                    default: ModelGalleryView,
+                    applicationBar: ModelGallerySearch
+                }
+            },
+            {
+                path: '/model/:modelIndex/:versionIndex',
+                name: 'model-details',
+                component: ModelView,
+                props: true
+            }
+        ]
+    }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+    history: createWebHashHistory(process.env.BASE_URL),
+    routes
 })
 
 export default router

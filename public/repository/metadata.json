@@ -1,0 +1,267 @@
+{
+  "models": [
+    {
+      "name": "fking-fable",
+      "type": "checkpoint",
+      "published": "2024-01-15 00:00:00",
+      "author": {
+        "name": "fking",
+        "avatarImageUrl": "/repository/images/00706-4282187234.png"
+      },
+      "description": "## fking-fable\n\n***a fking stable diffusion model***\n\nThis is the model description text where the maintainer can use **all sorts** of *markdown*.\n\nLike lists:\n - Item1\n - *Item2*\n - **Item 3**\n\n### And images\n\n![alt_text](/repository/images/00807-168635851.png){width: 768px;}",
+      "versions": [
+        {
+          "name": "v001",
+          "notes": "# This is a test\n\nof markdown text\n\n## Subtitle\n\n**some text**\n\n`monospaced text 01234`",
+          "published": "2024-01-13 00:00:00",
+          "updated": "2024-01-16 00:00:00",
+          "type": "checkpoint",
+          "base": "SD 2.1",
+          "triggers": [
+            "fking",
+            "another",
+            "one"
+          ],
+          "images": [
+            {
+              "url": "/repository/images/00807-168635851.png"
+            },
+            {
+              "url": "/repository/images/00706-4282187234.png"
+            },
+            {
+              "url": "/repository/images/00822-3302100773.png"
+            },
+            {
+              "url": "/repository/images/00827-330142420.png"
+            },
+            {
+              "url": "/repository/images/00786-3002371803.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "safetensors"
+            },
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.yaml?download=true",
+              "type": "yaml"
+            }
+          ]
+        },
+        {
+          "name": "v002",
+          "notes": "# Some other notes\n\nThis includes some additional changes:\n\n - More markdown\n\n - Another model version for preview",
+          "published": "2024-01-14 00:00:00",
+          "updated": "2024-01-17 00:00:00",
+          "type": "checkpoint",
+          "base": "SD 2.1",
+          "images": [
+            {
+              "url": "/repository/images/00827-330142420.png"
+            },
+            {
+              "url": "/repository/images/00822-3302100773.png"
+            },
+            {
+              "url": "/repository/images/00804-1354571152.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "safetensors"
+            }
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "datetime": "2024-01-15 00:00:00",
+          "description": "Published first version",
+          "changes": [
+            "Uploaded pictures",
+            "Created model description",
+            "Created primary download"
+          ]
+        },
+        {
+          "datetime": "2024-01-16 00:00:00",
+          "description": "Edited model description",
+          "changes": []
+        },
+        {
+          "datetime": "2024-01-17 00:00:00",
+          "description": "Edited model description",
+          "changes": []
+        }
+      ]
+    },
+    {
+      "name": "fking-test-001",
+      "type": "checkpoint",
+      "published": "2024-01-15 00:00:00",
+      "author": {
+        "name": "fking",
+        "avatarImageUrl": "/repository/images/00706-4282187234.png"
+      },
+      "description": "",
+      "versions": [
+        {
+          "name": "v001",
+          "images": [
+            {
+              "url": "/repository/images/00822-3302100773.png"
+            },
+            {
+              "url": "/repository/images/00804-1354571152.png"
+            },
+            {
+              "url": "/repository/images/00827-330142420.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "model"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fking-test-002",
+      "author": {
+        "name": "fking",
+        "avatarImageUrl": "/repository/images/00706-4282187234.png"
+      },
+      "description": "",
+      "versions": [
+        {
+          "name": "v001",
+          "images": [
+            {
+              "url": "/repository/images/00804-1354571152.png"
+            },
+            {
+              "url": "/repository/images/00827-330142420.png"
+            },
+            {
+              "url": "/repository/images/00822-3302100773.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "model"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fking-scifi",
+      "type": "checkpoint",
+      "published": "2024-01-15 00:00:00",
+      "author": {
+        "name": "fking",
+        "avatarImageUrl": "/repository/images/00706-4282187234.png"
+      },
+      "description": "",
+      "versions": [
+        {
+          "name": "v001",
+          "images": [
+            {
+              "url": "/repository/images/00786-3002371803.png"
+            },
+            {
+              "url": "/repository/images/00822-3302100773.png"
+            },
+            {
+              "url": "/repository/images/00827-330142420.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "model"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fkArtStyle",
+      "type": "checkpoint",
+      "published": "2024-01-15 00:00:00",
+      "author": {
+        "name": "fking",
+        "avatarImageUrl": "/repository/images/00706-4282187234.png"
+      },
+      "description": "",
+      "versions": [
+        {
+          "name": "v001",
+          "images": [
+            {
+              "url": "/repository/images/00760-1726837592.png"
+            },
+            {
+              "url": "/repository/images/00804-1354571152.png"
+            },
+            {
+              "url": "/repository/images/00827-330142420.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "model"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fkCinema",
+      "type": "checkpoint",
+      "published": "2024-01-15 00:00:00",
+      "author": {
+        "name": "fking",
+        "avatarImageUrl": "/repository/images/00706-4282187234.png"
+      },
+      "description": "",
+      "versions": [
+        {
+          "name": "v001",
+          "images": [
+            {
+              "url": "/repository/images/00788-1983536142.png"
+            },
+            {
+              "url": "/repository/images/00822-3302100773.png"
+            },
+            {
+              "url": "/repository/images/00804-1354571152.png"
+            }
+          ],
+          "downloads": [
+            {
+              "url": "https://huggingface.co/f-ing/fk-fable/resolve/main/fk-fable-public-test-001.fp16.safetensors?download=true",
+              "primary": true,
+              "type": "model"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

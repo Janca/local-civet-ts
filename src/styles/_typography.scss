@@ -1,0 +1,19 @@
+@use "variables";
+
+html, body {
+  font-size: variables.$unit-base-rem;
+  font-family: variables.$system-font-stack;
+
+  color: variables.$primary-text-color;
+  background-color: variables.$body-color;
+}
+
+*[class^="material-symbols"] {
+  font-size: 1.15em;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: variables.$title-text-color;
+  }
+}
